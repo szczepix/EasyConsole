@@ -12,10 +12,10 @@
     <PackageProjectUrl>https://github.com/szczepix/EasyConsole</PackageProjectUrl>
     <RepositoryUrl>https://github.com/szczepix/EasyConsole</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>console, .net, net, standard,</PackageTags>
+    <PackageTags>console, cmd, command, line, .net, net, core, standard, easy, splttingatms, jfgreco, szczepix</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageReleaseNotes>* Updated to .Net Standard 2.1</PackageReleaseNotes>
+    <PackageReleaseNotes>* ...</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
