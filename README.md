@@ -1,15 +1,19 @@
-# EasyConsole [![NuGet](https://img.shields.io/nuget/v/EasyConsole.svg)](https://www.nuget.org/packages/EasyConsole/)
+# EasyConsole [![NuGet][nuget-package-shield-url]][nuget-package-url]
+
 EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application.
 
-![Program Demo](https://i.imgur.com/Hlc2QoI.gif)
+![Program Demo](https://github.com/szczepix/EasyConsole/raw/master/docs/images/program-demo.gif)
 
-###Features
+## Features
+
 * Automatically numbered menus
 * Fluent creation of menus
 * Input/Output helpers
 
 ## Quick Start
+
 ### Menu
+
 The base functionality of the library is to provide an easy way to create console menus. A `Menu` consists of `Options` that will be presented to a user for selection. An option contains a name, that will be displayed to the user, and a callback function to invoke if the user selects the option. Render the menu in the console using the `Display()` method.
 
 ```c#
@@ -18,21 +22,26 @@ var menu = new EasyConsole.Menu()
       .Add("bar", () => Console.WriteLine("bar selected"));
 menu.Display();
 ```
-![Menu Demo](http://i.imgur.com/GXeYOm0.png)
+
+![Menu Demo][menu-demo-png]
 
 ### Utilities - Input/Output
+
 EasyConsole also provides input and output utilities to abstract the concept of dealing with the Console.
 
 The `Output` class adds helper methods to control the color of text in the console.
+
 ```c#
 Output.WriteLine("default");
 Output.WriteLine(ConsoleColor.Red, "red");
 Output.WriteLine(ConsoleColor.Green, "green");
 Output.WriteLine(ConsoleColor.Blue, "blue");
 ```
-![Output Utility Demo](http://i.imgur.com/tfeS18X.png)
+
+![Output Utility Demo][output-utility-demo-png]
 
 The `Input` class adds helper methods that prompt the user for input. The utility takes care of displaying prompt text and handling parsing logic. For example, non-numeric input will be rejected by `ReadInt()` and the user will be re-prompted.
+
 ```c#
 object input = Input.ReadString("Please enter a string:");
 Output.WriteLine("You wrote: {0}", input);
@@ -40,9 +49,11 @@ Output.WriteLine("You wrote: {0}", input);
 input = Input.ReadInt("Please enter an integer (between 1 and 10):", min: 1, max: 10);
 Output.WriteLine("You wrote: {0}", input);
 ```
-![Input Utility Demo](http://i.imgur.com/NLIr0mY.png)
+
+![Input Utility Demo][input-utility-demo-png]
 
 ### Program
+
 All of these features can be put together to create complex programs with nested menus. A console program consists of a main `Program` class that contains `Pages`. The `Program` class is a navigator of pages and will keep a history of pages that a user is navigating through. Think of it as your browser history. To create a program you must subclass the `Program` class and add any `Pages` in the constructor. _Note_: Before exiting the constructor, you must set one of the pages as the _main_ page where the program should start.
 
 ```c#
@@ -61,6 +72,7 @@ class DemoProgram : Program
     }
 }
 ```
+
 A `Page` can display any type of data, but the subclass `MenuPage` was created to speed up the creation of pages that display menus. Simply pass in all of the options you want displayed into the `options` parameter in the constructor.
 
 ```c#
@@ -79,9 +91,10 @@ class MainPage : MenuPage
 As you can see, navigation is handled by the `Program` class. As you navigate through to different pages, the history is logged. You can then invoke `NavigateBack()` if you would like to go back to the previous page.
 
 ## Example Project
-The source code contains an example console demo under the [Demo directory](https://github.com/splttingatms/EasyConsole/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
 
-## Publish NuGet package:
+The source code contains an example console demo under the [Demo directory](https://github.com/szczepix/EasyConsole/tree/master/szczepix.EasyConsole.Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
+
+## Publish NuGet package
 
 Exclude project from create nuget package (__when use dotnet package on solution__) add `<IsPackable>false</IsPackable>` inside the project general `<PropertyGroup>`.
 
@@ -91,10 +104,16 @@ Locally with suffix: `dotnet pack -c Release --version-suffix "-dev"`
 
 Publish to nuget.org `dotnet nuget push *.nupkg --api-key API_KEY --source https://api.nuget.org/v3/index.json`
 
-## Publish to self-contained exe file:
+## Publish to self-contained exe file
 
 Exclude project from publish (__when use dotnet publish on solution__) add `<IsPublishable>false</IsPublishable>` inside the project general `<PropertyGroup>`.
 
 With PDB: `dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`
 
 Without PDB: `dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=None -p:DebugSymbols=false`
+
+[menu-demo-png]: https://github.com/szczepix/EasyConsole/raw/master/docs/images/menu-demo.png
+[output-utility-demo-png]: https://github.com/szczepix/EasyConsole/raw/master/docs/images/output-utility-demo.png
+[input-utility-demo-png]: https://github.com/szczepix/EasyConsole/raw/master/docs/images/input-utility-demo.png
+[nuget-package-shield-url]: https://img.shields.io/nuget/v/szczepix.EasyConsole.svg
+[nuget-package-url]: https://www.nuget.org/packages/szczepix.EasyConsole/
