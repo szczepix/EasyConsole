@@ -1,6 +1,7 @@
 # EasyConsole [![NuGet][nuget-package-shield-url]][nuget-package-url]
 
-EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application.
+EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application. It's forked from [splttingatms](https://github.com/splttingatms/EasyConsole), merged with [jfgreco](https://github.com/jfgreco/EasyConsole) and updated to `.Net Standard 2.1`
+
 
 ![Program Demo](https://github.com/szczepix/EasyConsole/raw/master/docs/images/program-demo.gif)
 
