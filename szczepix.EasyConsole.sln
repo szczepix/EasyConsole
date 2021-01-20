@@ -3,14 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szczepix.EasyConsole", "szczepix.EasyConsole\szczepix.EasyConsole.csproj", "{DA79BA94-FAD6-462F-89C7-774FE822D594}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "szczepix.EasyConsole", "szczepix.EasyConsole\szczepix.EasyConsole.csproj", "{DA79BA94-FAD6-462F-89C7-774FE822D594}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szczepix.EasyConsole.Demo", "szczepix.EasyConsole.Demo\szczepix.EasyConsole.Demo.csproj", "{335BFAFC-A132-4940-B335-3F9E997D965A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "szczepix.EasyConsole.Demo", "szczepix.EasyConsole.Demo\szczepix.EasyConsole.Demo.csproj", "{335BFAFC-A132-4940-B335-3F9E997D965A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{E36419C8-2D4F-479B-A668-40E8099573F3}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
