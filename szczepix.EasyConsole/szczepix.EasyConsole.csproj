@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <VersionPrefix>1.2.0</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
+    <VersionPrefix>1.2.1</VersionPrefix>
+    <VersionSuffix>dev</VersionSuffix>
     <IsPublishable>false</IsPublishable>
     <IsPackable>true</IsPackable>
     <Description>EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application. It's forked from https://github.com/splttingatms/EasyConsole and updated to .Net Standard 2.1</Description>
