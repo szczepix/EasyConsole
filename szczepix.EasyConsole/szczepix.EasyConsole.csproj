@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.2.0</Version>
+    <IsPublishable>false</IsPublishable>
+    <IsPackable>true</IsPackable>
+    <Description>EasyConsole is a library to make it easier for developers to build a simple menu interface for a .NET console application. It's forked from https://github.com/splttingatms/EasyConsole and updated to .Net Standard 2.1</Description>
+    <Copyright>2021</Copyright>
+    <Authors>splttingatms, jfgreco, szczepix</Authors>
+    <PackageProjectUrl>https://github.com/szczepix/EasyConsole</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/szczepix/EasyConsole</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>console, .net, net, standard,</PackageTags>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReleaseNotes>- Updated to .Net Standard 2.1</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

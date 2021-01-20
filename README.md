@@ -81,13 +81,20 @@ As you can see, navigation is handled by the `Program` class. As you navigate th
 ## Example Project
 The source code contains an example console demo under the [Demo directory](https://github.com/splttingatms/EasyConsole/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
 
-Exclude project from publish (__when use publish on solution__) add `<IsPublishable>false</IsPublishable>` inside the project general `<PropertyGroup>`.
+## Publish NuGet package:
 
-Publish to self-contained file:
+Exclude project from create nuget package (__when use dotnet package on solution__) add `<IsPackable>false</IsPackable>` inside the project general `<PropertyGroup>`.
 
-`dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`
+Locally: `dotnet pack -c Release`
 
-`dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=None -p:DebugSymbols=false`
+Locally with suffix: `dotnet pack -c Release --version-suffix "-dev"`
 
+Publish to nuget.org `dotnet nuget push *.nupkg --api-key API_KEY --source https://api.nuget.org/v3/index.json`
 
-`dotnet publish -c Release -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`
+## Publish to self-contained exe file:
+
+Exclude project from publish (__when use dotnet publish on solution__) add `<IsPublishable>false</IsPublishable>` inside the project general `<PropertyGroup>`.
+
+With PDB: `dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`
+
+Without PDB: `dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=None -p:DebugSymbols=false`
