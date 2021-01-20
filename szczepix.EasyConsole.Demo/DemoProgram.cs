@@ -1,7 +1,6 @@
-﻿using Demo.Pages;
-using EasyConsole;
+﻿using szczepix.EasyConsole.Demo.Pages;
 
-namespace Demo
+namespace szczepix.EasyConsole.Demo
 {
     class DemoProgram : Program
     {

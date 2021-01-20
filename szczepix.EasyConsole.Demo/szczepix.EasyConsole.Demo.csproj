@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyConsole\szczepix.EasyConsole.csproj" />
+    <ProjectReference Include="..\szczepix.EasyConsole\szczepix.EasyConsole.csproj" />
   </ItemGroup>
 
 </Project>

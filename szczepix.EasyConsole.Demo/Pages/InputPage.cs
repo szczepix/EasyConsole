@@ -1,7 +1,6 @@
-﻿using EasyConsole;
-using System;
+﻿using System;
 
-namespace Demo.Pages
+namespace szczepix.EasyConsole.Demo.Pages
 {
     class InputPage : Page
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EasyConsole
+namespace szczepix.EasyConsole
 {
     public class Menu
     {

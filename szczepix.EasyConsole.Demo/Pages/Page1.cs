@@ -1,6 +1,4 @@
-﻿using EasyConsole;
-
-namespace Demo.Pages
+﻿namespace szczepix.EasyConsole.Demo.Pages
 {
     class Page1 : MenuPage
     {

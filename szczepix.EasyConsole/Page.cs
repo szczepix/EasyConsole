@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace EasyConsole
+namespace szczepix.EasyConsole
 {
     public abstract class Page
     {
@@ -22,7 +22,7 @@ namespace EasyConsole
                 string breadcrumb = null;
                 foreach (var title in Program.History.Select((page) => page.Title).Reverse())
                     breadcrumb += title + " > ";
-                breadcrumb = breadcrumb.Remove(breadcrumb.Length - 3);
+                breadcrumb = breadcrumb?.Remove(breadcrumb.Length - 3);
                 Console.WriteLine(breadcrumb);
             }
             else

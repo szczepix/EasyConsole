@@ -1,4 +1,4 @@
-﻿namespace EasyConsole
+﻿namespace szczepix.EasyConsole
 {
     public static class StringExtensions
     {

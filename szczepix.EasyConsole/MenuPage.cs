@@ -1,4 +1,4 @@
-﻿namespace EasyConsole
+﻿namespace szczepix.EasyConsole
 {
     public abstract class MenuPage : Page
     {
