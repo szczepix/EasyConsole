@@ -81,3 +81,13 @@ As you can see, navigation is handled by the `Program` class. As you navigate th
 ## Example Project
 The source code contains an example console demo under the [Demo directory](https://github.com/splttingatms/EasyConsole/tree/master/Demo). It offers a demo with nested menu options as well as an example of how to prompt the user for input.
 
+Exclude project from publish (__when use publish on solution__) add `<IsPublishable>false</IsPublishable>` inside the project general `<PropertyGroup>`.
+
+Publish to self-contained file:
+
+`dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`
+
+`dotnet publish -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=None -p:DebugSymbols=false`
+
+
+`dotnet publish -c Release -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:PublishTrimmed=true -r win-x64 -p:IncludeNativeLibrariesForSelfExtract=true`

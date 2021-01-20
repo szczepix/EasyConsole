@@ -6,14 +6,14 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://github.com/jfgreco/EasyConsole/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/jfgreco/EasyConsole</projectUrl>
+    <licenseUrl>https://github.com/szczepix/EasyConsole/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/szczepix/EasyConsole</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-- Migrated to .Net Standard 2.0
+- Migrated to .Net Standard 2.1
     </releaseNotes>
-    <copyright>Copyright 2020</copyright>
+    <copyright>Copyright 2021</copyright>
     <tags>console menu program</tags>
   </metadata>
 </package>
